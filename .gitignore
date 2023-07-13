@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+
+
+### ENV Files ###
+.env
+
+#This will make sure that you wont accidently commit the .env file to your repo and open up ur database to the world.
