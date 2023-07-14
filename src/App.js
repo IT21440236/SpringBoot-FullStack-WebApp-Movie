@@ -8,17 +8,17 @@ function App() {
   //Lets create a function that will handle a HTTP get request to an api endpoint that will return a list of movies.
   //Once the movie data is successfully returned, this code that changes the state of the movies array will be executed.
 
-  try {
-    const getMovies = async () => {
+  const getMovies = async () => {
+    try {
       const response = await api.get("/api/v1/movies");
 
-      console.log(response.data);
+      console.log(response.data); //This is log the data to the console.
 
       setMovies(response.data);
-    };
-  } catch (error) {
-    console.log(error);
-  }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   //Now we have to call this function. We can do this by using the useEffect hook.
   //getMovies(); //This will call the getMovies function when the component is rendered.
